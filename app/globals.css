@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-slate-950 text-slate-100 antialiased;
+  background-image:
+    radial-gradient(circle at top, rgba(14, 165, 233, 0.18), transparent 30%),
+    radial-gradient(circle at bottom right, rgba(34, 197, 94, 0.12), transparent 30%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.8);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(59, 130, 246, 0.4);
+  border-radius: 999px;
+}
+
+.glass-panel {
+  @apply border border-white/10 bg-slate-900/70 backdrop-blur-xl;
+}
+
+.gradient-text {
+  @apply bg-gradient-to-r from-cyan-400 via-sky-300 to-emerald-400 bg-clip-text text-transparent;
+}
+
+.metric-card {
+  @apply glass-panel rounded-2xl p-5 shadow-glow;
+}
+
+.market-pill {
+  @apply inline-flex items-center rounded-full border border-cyan-500/30 bg-cyan-500/10 px-3 py-1 text-xs font-medium text-cyan-200;
+}
+
+.section-shell {
+  @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+}
